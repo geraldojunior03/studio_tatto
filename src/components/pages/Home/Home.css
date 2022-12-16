@@ -1,0 +1,8 @@
+#welcome {
+  height: 1200px;
+  background-image: url('../../../img/header-bg.jpg');
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
