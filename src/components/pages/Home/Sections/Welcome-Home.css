@@ -1,0 +1,38 @@
+#welcome-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+#welcome-text h2 {
+  font-weight: 100;
+  font-size: 6em;
+}
+
+#welcome-text p {
+  letter-spacing: .2em;
+  font-weight: 700;
+  font-size: 6em;
+}
+
+#welcome-text a {
+  font-weight: 100;
+  color: #fff;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+@media (max-width: 798px){
+
+  #welcome-text h2 {
+    font-size: 12vw;
+  }
+
+  #welcome-text p {
+    font-size: 12vw;
+  }
+}

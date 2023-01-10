@@ -1,0 +1,30 @@
+#activity {
+  text-align: center;
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 100px 0px;
+}
+
+#activity h2 {
+  font-size: 2em;
+  font-weight: 300;
+}
+
+#activity p {
+  margin: 20px 0px 50px 0px;
+}
+
+#activity a {
+  text-decoration: none;
+  color: #fff;
+  background-color: #ff0000;
+  padding: 15px 30px;
+  border-radius: 20px;
+  transition: .3s;
+}
+
+#activity a:hover {
+  letter-spacing: 2px;
+  box-shadow: 0px 10px 50px rgb(255 0 0 / 60%);
+}

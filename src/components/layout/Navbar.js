@@ -6,39 +6,47 @@ import './Navbar.css'
 
 function Navbar() {
 
-  const classeText = 'text-white hover:text-zinc-400'
   const [click, setClick] = useState(true)
 
   function handleClick(){
     setClick(!click)
+    console.log(click)
+  }
+
+  function navbarClick(){
+    const navbar = document.getElementById("navbar")
+    if (navbar.classList.contains('active') === true) {
+      setClick(!click)
+      console.log(click)
+    }
   }
 
   return (
     <header>
-      <nav id="navbar" className='flex justify-around items-center absolute w-full h-24 z-50'>
-        <div id="logo">
-          <Link to='/' className='flex items-center text-white gap-5 text-2xl'>
-            <img src={logo} alt='navbar-brand' className='w-20'/>
+      <nav id="navbar" className={click ? '' : 'active'}>
+        <div >
+          <Link to='/' id="logo">
+            <img src={logo} alt='navbar-brand'/>
             <span>Studio Tatto</span>
           </Link>
         </div>
-        <div id="navbar-links" className='flex'>
-          <ul id="navbar-list" className='flex gap-30 text-base gap-8'>
-            <li id="navbar-list-item">
-              <Link className={classeText} to='/'>Página Inicial</Link>
+        <div id="navbar-links">
+          <ul id="navbar-list">
+            <li>
+              <Link onClick={navbarClick} id="navbar-list-item" to='/'>Página Inicial</Link>
             </li>
-            <li id="navbar-list-item">
-              <Link className={classeText} to='/about'>Quem somos</Link>
+            <li>
+              <Link onClick={navbarClick} id="navbar-list-item" to='/sobre-nos'>Quem somos</Link>
             </li>
-            <li id="navbar-list-item">
-              <Link className={classeText} to='/gallery'>Galeria</Link>
+            <li>
+              <Link onClick={navbarClick} id="navbar-list-item" to='/galeria'>Galeria</Link>
             </li>
-            <li id="navbar-list-item">
-              <Link className={classeText} to='/contact'>Contato</Link>
+            <li>
+              <Link onClick={navbarClick} id="navbar-list-item" to='/contato'>Contato</Link>
             </li>
           </ul>
-          <div id="mobile-menu" className='text-white' onClick={handleClick}>
-            <i className={click ? 'fa-light fa-bars' : 'fas fa-bars'} />
+          <div id="btnMobile" onClick={handleClick}>
+            <i className={click ? 'fas fa-bars' : 'fa-solid fa-xmark'} />
           </div>
         </div>
       </nav>

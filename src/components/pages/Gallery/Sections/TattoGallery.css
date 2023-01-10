@@ -1,0 +1,25 @@
+.gallery-content {
+  text-align: center;
+  padding: 50px 0px;
+}
+
+.gallery-content h2 {
+  font-size: 2em;
+}
+
+.gallery-pictures {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  justify-content: center;
+  gap: 30px;
+  padding-bottom: 30px;
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.gallery-pictures img {
+  max-width: 100%;
+  width: 100%;
+  object-fit: cover;
+}

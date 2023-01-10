@@ -1,0 +1,13 @@
+#welcome-gallery {
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background: url('../../../../img/header-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #fff;
+  font-size: 1.5em;
+}

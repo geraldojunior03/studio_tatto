@@ -1,0 +1,20 @@
+#welcome-about {
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background: url('../../../../img/header-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #fff;
+}
+
+#welcome-about h1 {
+  font-size: 3em;
+}
+
+#welcome-about p {
+  font-size: 1.5em;
+}
