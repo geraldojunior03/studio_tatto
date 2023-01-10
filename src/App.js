@@ -6,11 +6,13 @@ import Home from './components/pages/Home/Home';
 import Contact from './components/pages/Contact/Contact';
 import About from './components/pages/About/About';
 import Gallery from './components/pages/Gallery/Gallery';
+import ScrollToTop from './ScrollToTop';
 
 function App() {
   return (
     <>
       <Router>
+        <ScrollToTop />
         <Navbar />
         <Routes>
           <Route path='/' element={<Home />}/>
