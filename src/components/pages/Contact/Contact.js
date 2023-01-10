@@ -1,12 +1,22 @@
 import './Contact.css'
 
 function Contact() {
+
+  function formSubmit(e){
+    const $form = document.querySelector('form')
+
+    e.preventDefault()
+    $form.reset()
+
+    alert('Formulário enviado com sucesso')
+  }
+
   return (
     <div id="contact">
       <div className="main-container">
         <div className="contact form">
           <h2>Envie uma mensagem</h2>
-          <form>
+          <form onSubmit={formSubmit}>
             <div className="form-content">
               <div className="smallrow">
                 <div className="input-group">
@@ -25,7 +35,7 @@ function Contact() {
                 </div>
                 <div className="input-group">
                   <label htmlFor="number">Telefone</label>
-                  <input type="tel" name="Numero" id="number" placeholder="(xx) x.xxxx-xxxx" required autoComplete="off" />
+                  <input type="tel" name="Numero" id="number" placeholder="(xx) x.xxxx-xxxx" required autoComplete="off" maxLength="11" />
                 </div>
               </div>
               <div className="bigrow">
