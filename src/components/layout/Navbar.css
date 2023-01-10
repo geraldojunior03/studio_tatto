@@ -7,6 +7,12 @@
   height: 100px;
   background: rgba(0, 0, 0, .6);
   z-index: 1000;
+  transition: .3s;
+}
+
+#navbar.fixed {
+  position: fixed;
+  height: 80px;
 }
 
 #logo {
@@ -72,6 +78,13 @@
   }
 
   #navbar.active #navbar-list {
+    display: block;
+    height: calc(70vh - 100px);
+    visibility: visible;
+  }
+
+  #navbar.active.fixed #navbar-list {
+    top: 80px;
     display: block;
     height: calc(70vh - 100px);
     visibility: visible;

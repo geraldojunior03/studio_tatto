@@ -5,7 +5,9 @@ import logo from '../../img/logo.png'
 import './Navbar.css'
 
 function Navbar() {
+  const navbar = document.getElementById("navbar")
 
+  const [fix, setFix] = useState(false)
   const [click, setClick] = useState(true)
 
   function handleClick(){
@@ -14,17 +16,27 @@ function Navbar() {
   }
 
   function navbarClick(){
-    const navbar = document.getElementById("navbar")
     if (navbar.classList.contains('active') === true) {
       setClick(!click)
       console.log(click)
     }
   }
 
+  function scrollNavbar(){
+    if (window.scrollY >= 1){
+      setFix(true)
+    }
+    else {
+      setFix(false)
+    }
+  }
+
+  window.addEventListener('scroll', scrollNavbar)
+
   return (
     <header>
-      <nav id="navbar" className={click ? '' : 'active'}>
-        <div >
+      <nav id="navbar" className={`${click ? '' : 'active'} ${fix ? 'fixed' : ''}`}>
+        <div>
           <Link to='/' id="logo">
             <img src={logo} alt='navbar-brand'/>
             <span>Studio Tatto</span>
